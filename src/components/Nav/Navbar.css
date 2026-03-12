@@ -1,0 +1,263 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  height: 64px;
+  position: relative;
+  z-index: 10;
+}
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Add spacing between app name and hamburger menu */
+}
+.menu-items{
+  display: flex;
+  gap: 20px;
+}
+.navbar h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.menu-icon {
+  display: none; /* Hide by default */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.menu-icon svg {
+  width: 24px; /* Adjust the size of the SVG icon */
+  height: 24px; /* Adjust the size of the SVG icon */
+}
+.menu-icon-dark {
+  display: none; /* Hide by default */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.menu-icon-dark svg {
+  width: 24px; /* Adjust the size of the SVG icon */
+  height: 24px; /* Adjust the size of the SVG icon */
+}
+.menu-icon-dark-1 {
+  display: none; /* Hide by default */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.menu-icon-dark-1 svg {
+  width: 24px; /* Adjust the size of the SVG icon */
+  height: 24px; /* Adjust the size of the SVG icon */
+}
+
+.navbar-right {
+  display: flex;
+  gap: 10px;
+}
+
+.navbar-right button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Dark Mode */
+.dark-mode.navbar {
+  background-color: #252526;
+  color: #d4d4d4;
+}
+
+.dark-mode.navbar-right button {
+  background-color: #333;
+  color: #d4d4d4;
+}
+
+.dark-mode.navbar-right button:hover {
+  background-color: #444;
+}
+
+/* Light Mode */
+.light-mode.navbar {
+  background-color: #fff;
+  color: #333;
+}
+
+.light-mode.navbar-right button {
+  background-color: 	#ffd3b2;
+  color: #fff;
+}
+
+.light-mode.navbar-right button:hover {
+  background-color: 	#ffd3b2;
+}
+.user{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-style: roboto;
+  font-size: 30px;
+  font-weight: 500;
+  justify-content: center;
+}
+
+.menu-icon-dark-1 {
+  display: block; /* Show the hamburger menu on mobile */
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block; /* Show the hamburger menu on mobile */
+  }
+  .menu-icon-dark {
+    display: block; /* Show the hamburger menu on mobile */
+  }
+  .menu-icon-dark-1 {
+    display: none; /* Show the hamburger menu on mobile */
+  }
+
+  .navbar-right {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Position below the navbar */
+    right: 0; /* Align to the right edge of the screen */
+    width: 100%; /* Full width */
+    background-color: inherit;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it appears above other content */
+  }
+
+  .navbar-right.open {
+    display: flex;
+    width: 100%;
+    right: 0;
+    /* padding-left: 20px; */
+    padding: 10px 0px;
+  }
+
+  .navbar-left {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+/* User Section */
+.user {
+  background-color: #f0f0f0;
+  border-top: 1px solid #ccc;
+}
+
+.dark-mode .user {
+  background-color: #2d2d2d;
+  color: #968888;
+}
+
+.light-mode .user {
+  background-color: #f0f0f0;
+  color: #968888;
+}
+
+.light-mode .username {
+  font-weight: bold;
+  color: 	#726069; /* Blue color for the username */
+  position: relative;
+}
+.dark-mode .username {
+  font-weight: bold;
+  color: 	#ccc79d; /* Blue color for the username */
+  position: relative;
+}
+
+.cursor {
+  display: inline-block;
+  width: 2.4px;
+  height: 0.8em;
+  /* margin-top: 2px; */
+  background-color: 	#ffd3b2;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+
+/* Logout Popup */
+.logout-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+/* Light Mode */
+.light-mode .logout-popup {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Dark Mode */
+.dark-mode .logout-popup {
+  background-color: #2d2d2d;
+  color: #d4d4d4;
+}
+
+/* Buttons */
+.logout-popup button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 10px;
+  transition: background 0.2s ease-in-out;
+}
+
+.logout-popup .confirm-logout {
+  background-color: #ff6b6b;
+  color: #fff;
+}
+
+.logout-popup .confirm-logout:hover {
+  background-color: #ff4d4d;
+}
+
+.logout-popup .cancel-logout {
+  background-color: #ffd3b2;
+  color: #333;
+}
+
+.logout-popup .cancel-logout:hover {
+  background-color: #f0a07e;
+}
+.tagline {
+  font-size: 14px;
+  color: gray;
+  margin-top: 5px;
+}
