@@ -1,0 +1,38 @@
+/* Same as Login.css */
+.auth-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.dark-mode.auth-screen {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+}
+
+.light-mode.auth-screen {
+  background-color: #fff;
+  color: #333;
+}
+
+.auth-screen h2 {
+  margin-bottom: 20px;
+}
+
+.error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.auth-screen p {
+  margin-top: 10px;
+}
+
+.auth-screen p span {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}
