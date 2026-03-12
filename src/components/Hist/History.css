@@ -1,0 +1,80 @@
+.history-tab {
+  padding: 20px;
+  border-top: 1px solid #ccc;
+}
+
+.dark-mode.history-tab {
+  background-color: #252526;
+  color: #d4d4d4;
+}
+
+.light-mode.history-tab {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.history-tab h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.history-list {
+  max-height: 300px; /* Fixed height */
+  overflow-y: auto; /* Enable vertical scrollbar */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.dark-mode .history-list {
+  border-color: #444;
+}
+
+.light-mode .history-list {
+  border-color: #ccc;
+}
+
+.history-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}
+
+.dark-mode .history-item {
+  background-color: #2d2d2d;
+  color: #d4d4d4;
+}
+
+.light-mode .history-item {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.input-output-container {
+  display: flex; /* Display input and output side by side */
+  gap: 20px; /* Space between input and output */
+}
+
+.input-container,
+.output-container {
+  flex: 1; /* Equal width for input and output */
+}
+
+.input-container pre,
+.output-container pre {
+  margin: 5px 0;
+  white-space: pre-wrap; /* Preserve formatting and wrap text */
+  word-wrap: break-word;
+  font-family: 'Courier New', Courier, monospace; /* Monospace font for code-like appearance */
+  font-size: 12px; /* Reduced font size */
+  background-color: #e0e0e0; /* Light background for pre tags */
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.dark-mode .input-container pre,
+.dark-mode .output-container pre {
+  background-color: #1e1e1e; /* Dark background for pre tags */
+  color: #d4d4d4;
+}
